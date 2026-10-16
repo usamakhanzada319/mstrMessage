@@ -4,7 +4,7 @@ import VerificationEmail from "../../emails/VerificationEmail";
 
 import { ApiResponse } from "../types/ApiResponse";
 
-export async function sendVerificationEamil(
+export async function sendVerificationEmail(
   email: string,
   username: string,
   verifyCode: string,
@@ -21,7 +21,7 @@ export async function sendVerificationEamil(
       message: "Verification Email send successfully",
     };
   } catch (Emailerror) {
-    console.error("error sending Vefification Email");
+    console.error("error sending Vefification Email", Emailerror);
     return { success: false, message: "faild due to send verification email" };
   }
 }
