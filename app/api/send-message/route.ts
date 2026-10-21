@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    console.error("message addingg error", error);
+    console.error("message adding error", error);
     return Response.json(
       { success: false, message: "server Error" },
       { status: 500 },
